@@ -8,4 +8,5 @@
 > $ node server.js
 
 3. You can now go to:
+
 http://localhost:8080/index.html
