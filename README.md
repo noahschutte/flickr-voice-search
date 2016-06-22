@@ -1,6 +1,11 @@
 #Flickr Voice Search
 ## How to Run the Project
 
+### From the command line:
+1. Clone repository
+
+1. Navigate into repository
+
 1. Install connect
   > $ npm install connect serve-static
 
