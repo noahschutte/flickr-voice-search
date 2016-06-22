@@ -20,6 +20,10 @@ recognition.maxAlternatives = 1;
 
 var diagnostic = document.querySelector('.output');
 
+var flickr = new Flickr({
+  api_key: "0d26a59ac5bb2adb77863939323138e6"
+});
+
 document.body.onclick = function() {
   recognition.start();
   console.log('Ready to receive a search command.');
@@ -30,6 +34,16 @@ recognition.onresult = function(event) {
   var recentSearch = searchHistory[searchHistory.length - 1]
   var phrase = recentSearch[0].transcript;
   console.log('Confidence: ' + recentSearch[0].confidence)
+  flickr.photos.search({
+    text: phrase
+  }, function(err, result) {
+    if(err) { throw new Error(err); }
+    var farm = result.photos.photo[0].farm
+    var server = result.photos.photo[0].server
+    var id = result.photos.photo[0].id
+    var secret = result.photos.photo[0].secret
+    $('.pictures').prepend("<div><p>"+phrase+"</p><img src='https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+".jpg'/></div>")
+  });
 }
 
 recognition.onnomatch = function(event) {
