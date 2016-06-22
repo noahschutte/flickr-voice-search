@@ -1,7 +1,6 @@
 1. Install connect and serve-static with NPM
-
-$ npm install connect serve-static
-$ node server.js
+  * $ npm install connect serve-static
+  * $ node server.js
 
 2. You can now go to:
 
