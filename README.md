@@ -14,6 +14,6 @@
 2. Serve-static with NPM
 > $ node server.js
 
-3. You can now open the following html in your browser:
+3. You can now open the following html in your browser: (Chrome preferred)
 
 http://localhost:8080/index.html
