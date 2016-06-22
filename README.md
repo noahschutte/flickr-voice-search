@@ -3,6 +3,7 @@
 
 1. Install connect
 > $ npm install connect serve-static
+
 * You may recieve you an error that package.json does not exist. Ignore this error and continue to the next step.
 2. Serve-static with NPM
 > $ node server.js
